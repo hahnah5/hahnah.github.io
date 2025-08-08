@@ -7,7 +7,7 @@
   <style>
     :root {
       --bg: #ffffff;
-      --text: #000000;
+      --text: #111111;
       --accent: #f97316;
       --border: #d1d5db;
     }
@@ -15,28 +15,43 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 14px/1.5 ui-monospace, monospace;
+      font-family: ui-monospace, monospace;
+      line-height: 1.6;
       padding: 20px;
     }
     .wrap { max-width: 900px; margin: 0 auto; }
-    h1 { font-size: 24px; font-weight: 400; margin-bottom: 20px; }
-    h2 { font-size: 16px; font-weight: 700; color: var(--accent); margin: 40px 0 8px; }
-    h3 { font-size: 14px; font-weight: 700; color: var(--accent); margin: 24px 0 8px; }
+    header h1 { font-size: 2rem; font-weight: 400; margin-bottom: 20px; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin: 40px 0 8px; }
+    h3 { font-size: 1rem; font-weight: 700; color: var(--accent); margin: 24px 0 8px; }
     a { color: inherit; text-decoration: none; }
     a.underline { text-decoration: underline; }
     .top-right { position: fixed; top: 20px; right: 20px; display: flex; gap: 12px; }
-    .chip { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--text); border-radius: 999px; transition: background .15s ease, color .15s ease; }
+    .chip { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--text); border-radius: 50%; transition: background .15s ease, color .15s ease; }
     .chip:hover { background: var(--accent); color: var(--bg); }
     .chip svg { width: 16px; height: 16px; fill: currentColor; }
-    footer { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 12px; text-align: center; font-size: 12px; }
+    footer { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 12px; text-align: center; font-size: 0.8rem; color: #555; }
     .bold { font-weight: 600; color: #000; }
-    .date { font-weight: 600; color: #000; }
-    .highlight { font-weight: 600; color: #000; }
+    .date, .highlight { font-weight: 600; color: #000; }
+    p { margin: 0 0 1em; }
   </style>
 </head>
 <body>
   <nav class="top-right" aria-label="quick links">
-    <!-- icons omitted for brevity -->
+    <a class="chip" href="mailto:hahnah.info@gmail.com" title="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </a>
+    <a class="chip" href="https://hahnah.bandcamp.com/" target="_blank" rel="noopener noreferrer" title="Bandcamp">
+      <svg viewBox="0 0 194 194" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 145.8h129.2L194 48.2H64.8z"/></svg>
+    </a>
+    <a class="chip" href="https://www.instagram.com/__hahnah__/" target="_blank" rel="noopener noreferrer" title="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm9 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>
+    </a>
+    <a class="chip" href="https://soundcloud.com/hahnah_5" target="_blank" rel="noopener noreferrer" title="SoundCloud">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M437.02 211.13c-9.17 0-18.03 1.13-26.5 3.26-7.26-53.01-52.71-93.97-107.7-93.97-15.39 0-30.05 3.23-43.23 9.02-8.84 3.94-11.54 8.09-11.54 17.86v196.65c0 9.77 7.92 17.69 17.69 17.69h171.28c41.48 0 75.08-33.6 75.08-75.08 0-41.48-33.6-75.08-75.08-75.08z"/><path d="M0 341.94h31.02V197.07H0v144.87zm46.53 0h31.02V183.07H46.53v158.87zm46.53 0h31.02V168.13H93.06v173.81zm46.53 0h31.02V153.2h-31.02v188.74z"/></svg>
+    </a>
+    <a class="chip" href="https://www.youtube.com/@hahnah5" target="_blank" rel="noopener noreferrer" title="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5v9a3.5 3.5 0 0 1-3.5 3.5h-15A3.5 3.5 0 0 1 1 16.5v-9A3.5 3.5 0 0 1 4.5 4h15A3.5 3.5 0 0 1 23 7.5ZM10 9v6l6-3-6-3Z"/></svg>
+    </a>
   </nav>
 
   <div class="wrap">
@@ -45,12 +60,14 @@
       <section id="news">
         <h2>new release</h2>
         <p><span class="highlight">Vesuvian Sighs</span> — Macroterra Records (MTR 007) — digital + vinyl — Mar 2025 —
-          <a class="underline" href="https://macroterra.bandcamp.com/album/vesuvian-sighs" target="_blank">listen here</a>
+          <a class="underline" href="https://macroterra.bandcamp.com/album/vesuvian-sighs" target="_blank" rel="noopener noreferrer">listen here</a>
         </p>
       </section>
+
       <section id="work">
         <h2>past shows</h2>
-        <p><span class="date">06.07.25</span> — Kiostag @ Rami secchi — Turin (IT) <br />
+        <p>
+          <span class="date">06.07.25</span> — Kiostag @ Rami secchi — Turin (IT) <br />
           <span class="date">22.06.25</span> — Store Session @ Groove Dogma — Putignano (BA, IT) <br />
           <span class="date">01.08.21</span> — Klang Rising @ Klang — A/V w/ SR60 — Rome (IT) <br />
           <span class="date">30.07.21</span> — Elettronicamente @ CoBar Stecca — A/V w/ SR60 — Torre del Greco (NA, IT) <br />
@@ -60,32 +77,43 @@
           <span class="date">05.05.19</span> — LPM @ Mattatoio — Rome (IT)
         </p>
         <h3>as Nah60 (collaboration with SR60) — AV Performance</h3>
-        <p><span class="date">01.12.23</span> — Live Cinema Festival @ Cieloterra — Rome (IT) <br />
+        <p>
+          <span class="date">01.12.23</span> — Live Cinema Festival @ Cieloterra — Rome (IT) <br />
           <span class="date">30.10.21</span> — Elettronicamente @ CoBar Stecca — Torre del Greco (NA, IT) <br />
           <span class="date">28.08.21</span> — LPM @ Le Fattizze — Nardò (LE, IT) <br />
           <span class="date">12.08.21</span> — COV_ART21 @ Spazio12 — Monopoli (BA, IT)
         </p>
       </section>
+
       <section id="exhibitions">
         <h2>art exhibitions</h2>
-        <p><span class="date">Sep–Oct 2022</span> — Visioni Digitali @ Pagea Arte Contemporanea — Angri (NA, IT) <br />
+        <p>
+          <span class="date">Sep–Oct 2022</span> — Visioni Digitali @ Pagea Arte Contemporanea — Angri (NA, IT) <br />
           <span class="date">Dec–Jan 2022</span> — 139 x 100 exhibition vol. 4 @ Multicinema Corallo — Torre del Greco (NA, IT) <br />
           <span class="date">Oct 2021</span> — Solo Exhibition @ CoBar Stecca — Torre del Greco (NA, IT) <br />
           <span class="date">Jul–Aug 2021</span> — COV_ART21 @ Spazio12 — Monopoli (BA, IT)
         </p>
       </section>
+
       <section id="press">
         <h2>press</h2>
-        <p><a class="underline" href="https://www.parkettchannel.it/premiere-macro-terra-records/" target="_blank">Parkett Channel — Vesuvian Sighs</a></p>
+        <p><a class="underline" href="https://www.parkettchannel.it/premiere-macro-terra-records/" target="_blank" rel="noopener noreferrer">Parkett Channel — Vesuvian Sighs</a></p>
       </section>
+
       <section id="about">
         <h2>about</h2>
         <p><span class="bold">Audiovisual artist</span> with a solid background in engineering and a strong inclination towards <span class="bold">visual</span> and <span class="bold">sound experimentation</span>. He has participated in numerous <span class="bold">events</span> and <span class="bold">festivals</span>, in Italy and abroad, with <span class="bold">AV performances</span> and <span class="bold">art exhibitions</span>, collaborating with <span class="bold">SR60</span> (Giuseppe Mascia). His experience includes performances at venues such as <span class="bold">LCF</span> and <span class="bold">LPM</span>, and various independent underground festivals like <span class="bold">Modern Bon</span> (Berlin), as well as in clubs as <span class="bold">VJ</span>, with the moniker <span class="bold">p#</span>, for international DJs and independent bands. As <span class="bold">music producer</span>, he recently released for <span class="bold">Macroterra Records</span> in collaboration with label owner <span class="bold">Angelo Pomposo</span>. He is currently active with <span class="bold">Vesuvian Sighs AV Live</span> in various formats. His <span class="bold">artistic practice</span> integrates a wide and varied set of hardware and software, combining a <span class="bold">technical approach</span> with an <span class="bold">experimental vision</span>.
         </p>
       </section>
     </main>
-    <footer><p>© <span id="year"></span> hah nah</p></footer>
+
+    <footer>
+      <p>© <span id="year"></span> hah nah</p>
+    </footer>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
