@@ -1,90 +1,101 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hah nah — EPK</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hah nah — artist site</title>
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --accent: #f97316;
+      --border: #d1d5db;
+    }
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #f9f9f9;
-      color: #111;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      line-height: 1.6;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.5 ui-monospace, monospace;
+      padding: 20px;
     }
-    h1, h2 {
-      font-weight: 600;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-    a {
-      color: #333;
-      text-decoration: underline;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    em {
-      color: #666;
-    }
+    .wrap { max-width: 900px; margin: 0 auto; }
+    h1 { font-size: 24px; font-weight: 400; margin-bottom: 20px; }
+    h2 { font-size: 16px; font-weight: 700; color: var(--accent); margin: 40px 0 8px; }
+    h3 { font-size: 14px; font-weight: 700; color: var(--accent); margin: 24px 0 8px; }
+    a { color: inherit; text-decoration: none; }
+    a.underline { text-decoration: underline; }
+    .top-right { position: fixed; top: 20px; right: 20px; display: flex; gap: 12px; }
+    .chip { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--text); border-radius: 999px; transition: background .15s ease, color .15s ease; }
+    .chip:hover { background: var(--accent); color: var(--bg); }
+    .chip svg { width: 16px; height: 16px; fill: currentColor; }
+    footer { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 12px; text-align: center; font-size: 12px; }
+    .bold { font-weight: 600; color: #000; }
   </style>
 </head>
 <body>
+  <nav class="top-right" aria-label="quick links">
+    <a class="chip" href="mailto:hahnah.info@gmail.com" title="Email">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </a>
+    <a class="chip" href="https://hahnah.bandcamp.com/" target="_blank" title="Bandcamp">
+      <!-- Official Bandcamp logo -->
+      <svg viewBox="0 0 194 194" xmlns="http://www.w3.org/2000/svg"><path d="M0 145.8h129.2L194 48.2H64.8z"/></svg>
+    </a>
+    <a class="chip" href="https://www.instagram.com/__hahnah__/" target="_blank" title="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm9 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>
+    </a>
+    <a class="chip" href="https://soundcloud.com/hahnah_5" target="_blank" title="SoundCloud">
+      <!-- Official SoundCloud logo -->
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M437.02 211.13c-9.17 0-18.03 1.13-26.5 3.26-7.26-53.01-52.71-93.97-107.7-93.97-15.39 0-30.05 3.23-43.23 9.02-8.84 3.94-11.54 8.09-11.54 17.86v196.65c0 9.77 7.92 17.69 17.69 17.69h171.28c41.48 0 75.08-33.6 75.08-75.08 0-41.48-33.6-75.08-75.08-75.08z"/><path d="M0 341.94h31.02V197.07H0v144.87zm46.53 0h31.02V183.07H46.53v158.87zm46.53 0h31.02V168.13H93.06v173.81zm46.53 0h31.02V153.2h-31.02v188.74z"/></svg>
+    </a>
+    <a class="chip" href="https://www.youtube.com/@hahnah5" target="_blank" title="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23 7.5v9a3.5 3.5 0 0 1-3.5 3.5h-15A3.5 3.5 0 0 1 1 16.5v-9A3.5 3.5 0 0 1 4.5 4h15A3.5 3.5 0 0 1 23 7.5ZM10 9v6l6-3-6-3Z"/></svg>
+    </a>
+  </nav>
 
-  <h1>hah nah — Electronic Press Kit</h1>
-
-  <h2>BIO</h2>
-  <p>
-    <strong>hah nah</strong> è un artista audiovisivo attivo tra Bari e Torino, con un solido background in ingegneria e una spiccata inclinazione verso la sperimentazione visiva e sonora. 
-    La sua ricerca si muove tra performance AV, installazioni e produzioni elettroniche, con una poetica che intreccia approccio tecnico e visione sperimentale.
-  </p>
-  <p>
-    Ha partecipato a numerosi eventi e festival in Italia e all'estero, portando i suoi lavori in contesti come <strong>LPM</strong>, <strong>Urban Spree</strong> (Berlino) e vari festival della scena underground europea, spesso collaborando con il collettivo <strong>SR60</strong>.
-  </p>
-  <p>
-    È anche produttore musicale: la sua recente release <em>"Vesuvian Sighs"</em>, pubblicata da <strong>Macroterra Records</strong> in collaborazione con <strong>Angelo Pomposo</strong>, fonde ambient, rumore stratificato e paesaggi sonori liquidi.
-  </p>
-  <p>
-    Attualmente è in tour con <strong>Vesuvian Sighs AV Live</strong>, un progetto audiovisivo modulare presentato in diverse forme e spazi.
-  </p>
-
-  <h2>MUSIC & VIDEO</h2>
-  <ul>
-    <li><strong>Release:</strong> <em>"Vesuvian Sighs"</em> — Macroterra Records (2025)</li>
-    <li><a href="https://macroterra.bandcamp.com/album/vesuvian-sighs" target="_blank">Ascolta su Bandcamp</a></li>
-  </ul>
-
-  <h2>HIGHLIGHTS</h2>
-  <ul>
-    <li>Live AV @ LPM Festival (Roma)</li>
-    <li>Performance @ Urban Spree (Berlino)</li>
-    <li>Collaborazioni con il collettivo SR60</li>
-    <li>Uscita discografica su Macroterra Records</li>
-    <li>Tour attuale: Vesuvian Sighs AV Live</li>
-  </ul>
-
-  <h2>PRESS & MEDIA</h2>
-  <p><em>Da compilare con eventuali articoli, recensioni, interviste</em></p>
-
-  <h2>VISUAL MATERIAL</h2>
-  <ul>
-    <li>Foto promozionali (alta risoluzione)</li>
-    <li>Frame o visual del progetto Vesuvian Sighs AV Live</li>
-    <li>Cover release e loghi</li>
-  </ul>
-
-  <h2>CONTATTI</h2>
-  <ul>
-    <li><a href="https://macroterra.bandcamp.com/album/vesuvian-sighs" target="_blank">Bandcamp (Macroterra)</a></li>
-    <li><em>Booking / Management: da aggiungere</em></li>
-    <li><em>Email / Social: da aggiungere</em></li>
-  </ul>
-
-  <h2>TECH RIDER</h2>
-  <p><em>Opzionale — da inserire se disponibile</em></p>
-
+  <div class="wrap">
+    <header><h1>hah nah</h1></header>
+    <main>
+      <section id="news">
+        <h2>new release</h2>
+        <p>Vesuvian Sighs — Macroterra Records (MTR 007) — digital + vinyl — Mar 2025 —
+          <a class="underline" href="https://macroterra.bandcamp.com/album/vesuvian-sighs" target="_blank">listen here</a>
+        </p>
+      </section>
+      <section id="work">
+        <h2>past shows</h2>
+        <p>06.07.25 — Kiostag @ Rami secchi — Turin (IT) <br />
+          22.06.25 — Store Session @ Groove Dogma — Putignano (BA, IT) <br />
+          01.08.21 — Klang Rising @ Klang — A/V w/ SR60 — Rome (IT) <br />
+          30.07.21 — Elettronicamente @ CoBar Stecca — A/V w/ SR60 — Torre del Greco (NA, IT) <br />
+          27.11.20 — Klang ist Hybriden @ Klang — A/V w/ SR60 — Rome (IT) <br />
+          29.02.20 — Modern Bön IV @ Urban Spree — A/V w/ SR60 — Berlin (GER) <br />
+          23.06.19 — La Pyramide @ Recherche — Rome (IT) <br />
+          05.05.19 — LPM @ Mattatoio — Rome (IT)
+        </p>
+        <h3>as Nah60 (collaboration with SR60) — AV Performance</h3>
+        <p>01.12.23 — Live Cinema Festival @ Cieloterra — Rome (IT) <br />
+          30.10.21 — Elettronicamente @ CoBar Stecca — Torre del Greco (NA, IT) <br />
+          28.08.21 — LPM @ Le Fattizze — Nardò (LE, IT) <br />
+          12.08.21 — COV_ART21 @ Spazio12 — Monopoli (BA, IT)
+        </p>
+      </section>
+      <section id="exhibitions">
+        <h2>art exhibitions</h2>
+        <p>Sep–Oct 2022 — Visioni Digitali @ Pagea Arte Contemporanea — Angri (NA, IT) <br />
+          Dec–Jan 2022 — 139 x 100 exhibition vol. 4 @ Multicinema Corallo — Torre del Greco (NA, IT) <br />
+          Oct 2021 — Esposizione Individuale @ CoBar Stecca — Torre del Greco (NA, IT) <br />
+          Jul–Aug 2021 — COV_ART21 @ Spazio12 — Monopoli (BA, IT)
+        </p>
+      </section>
+      <section id="about">
+        <h2>about</h2>
+        <p><span class="bold">Audiovisual artist</span> with a solid background in engineering and a strong inclination towards <span class="bold">visual</span> and <span class="bold">sound experimentation</span>. He has participated in numerous <span class="bold">events</span> and <span class="bold">festivals</span>, in Italy and abroad, with <span class="bold">AV performances</span> and <span class="bold">art exhibitions</span>, collaborating with <span class="bold">SR60</span> (Giuseppe Mascia). His experience includes performances at venues such as <span class="bold">LCF</span> and <span class="bold">LPM</span>, and various independent underground festivals like <span class="bold">Modern Bon</span> (Berlin), as well as in clubs as <span class="bold">VJ</span>, with the moniker <span class="bold">p#</span>, for international DJs and independent bands. As <span class="bold">music producer</span>, he recently released for <span class="bold">Macroterra Records</span> in collaboration with label owner <span class="bold">Angelo Pomposo</span>. He is currently active with <span class="bold">Vesuvian Sighs AV Live</span> in various formats. His <span class="bold">artistic practice</span> integrates a wide and varied set of hardware and software, combining a <span class="bold">technical approach</span> with an <span class="bold">experimental vision</span>.
+        </p>
+      </section>
+    </main>
+    <footer><p>© <span id="year"></span> hah nah</p></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
