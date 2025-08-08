@@ -13,7 +13,10 @@
     }
     html { font-size: 14px; }
     @media (max-width: 600px) {
-      html { font-size: 13px; }
+      html { font-size: 14px; }
+      body { line-height: 1.65; padding: 16px; }
+      .wrap { padding: 0 4px; }
+      p { font-size: 1rem; line-height: 1.6; }
     }
     body {
       margin: 0;
@@ -35,7 +38,7 @@
     .chip svg { width: 15px; height: 15px; fill: currentColor; }
     footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 10px; text-align: center; font-size: 0.75rem; color: #555; }
 
-    /* Bold fix on mobile: many monospace stacks don't have bold weights */
+    /* Bold fix on mobile */
     .bold, .date, .highlight, strong, b {
       font-weight: 700;
       color: #000;
@@ -63,7 +66,8 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5v9a3.5 3.5 0 0 1-3.5 3.5h-15A3.5 3.5 0 0 1 1 16.5v-9A3.5 3.5 0 0 1 4.5 4h15A3.5 3.5 0 0 1 23 7.5ZM10 9v6l6-3-6-3Z"/></svg>
     </a>
     <a class="chip" href="https://linktr.ee/hahnah" target="_blank" rel="noopener noreferrer" title="Linktree">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2a1.2 1.2 0 0 1 1.2 1.2v5.47l3.87-3.87a1.2 1.2 0 0 1 1.7 1.7L14.9 10.37h5.47a1.2 1.2 0 1 1 0 2.4H14.9l3.87 3.87a1.2 1.2 0 1 1-1.7 1.7L13.2 14.47v5.47a1.2 1.2 0 1 1-2.4 0v-5.47l-3.87 3.87a1.2 1.2 0 1 1-1.7-1.7l3.87-3.87H4.63a1.2 1.2 0 1 1 0-2.4h5.47L6.23 6.5a1.2 1.2 0 0 1 1.7-1.7l3.87 3.87V3.2A1.2 1.2 0 0 1 12 2z"/></svg>
+      <!-- Official Linktree asterisk-like mark rendered as SVG for crisp display -->
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.6 0 1 .4 1 1v6.1L16.8 5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L14.4 11H21c.6 0 1 .4 1 1s-.4 1-1 1h-6.6l3.8 4.6c.4.4.4 1 0 1.4s-1 .4-1.4 0L13 14.9V21c0 .6-.4 1-1 1s-1-.4-1-1v-6.1L7.2 19c-.4.4-1 .4-1.4 0s-.4-1 0-1.4L9.6 13H3c-.6 0-1-.4-1-1s.4-1 1-1h6.6L5.8 6.4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L11 9.1V3c0-.6.4-1 1-1z"/></svg>
     </a>
   </nav>
 
@@ -76,9 +80,11 @@
           <a class="underline" href="https://macroterra.bandcamp.com/album/vesuvian-sighs" target="_blank" rel="noopener noreferrer">listen here</a>
         </p>
       </section>
+
       <section id="work">
         <h2>past shows</h2>
-        <p><span class="date">06.07.25</span> — Kiostag @ Rami secchi — Turin (IT) <br />
+        <p>
+          <span class="date">06.07.25</span> — Kiostag @ Rami secchi — Turin (IT) <br />
           <span class="date">22.06.25</span> — Store Session @ Groove Dogma — Putignano (BA, IT) <br />
           <span class="date">01.08.21</span> — Klang Rising @ Klang — A/V w/ SR60 — Rome (IT) <br />
           <span class="date">30.07.21</span> — Elettronicamente @ CoBar Stecca — A/V w/ SR60 — Torre del Greco (NA, IT) <br />
@@ -88,32 +94,43 @@
           <span class="date">05.05.19</span> — LPM @ Mattatoio — Rome (IT)
         </p>
         <h3>as Nah60 (collaboration with SR60) — AV Performance</h3>
-        <p><span class="date">01.12.23</span> — Live Cinema Festival @ Cieloterra — Rome (IT) <br />
+        <p>
+          <span class="date">01.12.23</span> — Live Cinema Festival @ Cieloterra — Rome (IT) <br />
           <span class="date">30.10.21</span> — Elettronicamente @ CoBar Stecca — Torre del Greco (NA, IT) <br />
           <span class="date">28.08.21</span> — LPM @ Le Fattizze — Nardò (LE, IT) <br />
           <span class="date">12.08.21</span> — COV_ART21 @ Spazio12 — Monopoli (BA, IT)
         </p>
       </section>
+
       <section id="exhibitions">
         <h2>art exhibitions</h2>
-        <p><span class="date">Sep–Oct 2022</span> — Visioni Digitali @ Pagea Arte Contemporanea — Angri (NA, IT) <br />
+        <p>
+          <span class="date">Sep–Oct 2022</span> — Visioni Digitali @ Pagea Arte Contemporanea — Angri (NA, IT) <br />
           <span class="date">Dec–Jan 2022</span> — 139 x 100 exhibition vol. 4 @ Multicinema Corallo — Torre del Greco (NA, IT) <br />
           <span class="date">Oct 2021</span> — Solo Exhibition @ CoBar Stecca — Torre del Greco (NA, IT) <br />
           <span class="date">Jul–Aug 2021</span> — COV_ART21 @ Spazio12 — Monopoli (BA, IT)
         </p>
       </section>
+
       <section id="press">
         <h2>press</h2>
         <p><a class="underline" href="https://www.parkettchannel.it/premiere-macro-terra-records/" target="_blank" rel="noopener noreferrer">Parkett Channel — Vesuvian Sighs</a></p>
       </section>
+
       <section id="about">
         <h2>about</h2>
         <p><span class="bold">Audiovisual artist</span> with a solid background in engineering and a strong inclination towards <span class="bold">visual</span> and <span class="bold">sound experimentation</span>. He has participated in numerous <span class="bold">events</span> and <span class="bold">festivals</span>, in Italy and abroad, with <span class="bold">AV performances</span> and <span class="bold">art exhibitions</span>, collaborating with <span class="bold">SR60</span> (Giuseppe Mascia). His experience includes performances at venues such as <span class="bold">LCF</span> and <span class="bold">LPM</span>, and various independent underground festivals like <span class="bold">Modern Bon</span> (Berlin), as well as in clubs as <span class="bold">VJ</span>, with the moniker <span class="bold">p#</span>, for international DJs and independent bands. As <span class="bold">music producer</span>, he recently released for <span class="bold">Macroterra Records</span> in collaboration with label owner <span class="bold">Angelo Pomposo</span>. He is currently active with <span class="bold">Vesuvian Sighs AV Live</span> in various formats. His <span class="bold">artistic practice</span> integrates a wide and varied set of hardware and software, combining a <span class="bold">technical approach</span> with an <span class="bold">experimental vision</span>.
         </p>
       </section>
     </main>
-    <footer><p>© <span id="year"></span> hah nah</p></footer>
+
+    <footer>
+      <p>© <span id="year"></span> hah nah</p>
+    </footer>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
